@@ -1,0 +1,7 @@
+/node_modules
+
+/app/assets/javascripts/stork-club.js
+/app/assets/javascripts/stork-club.css
+
+npm-debug.log
+package-lock.json
