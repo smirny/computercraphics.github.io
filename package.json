@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --config config/webpack/stork-club.config.js",
-    "production": "webpack -p --optimize-dedupe --bail --config config/webpack/stork-club.config.js"
+    "start": "webpack --watch --config src/webpack/c_c.config.js",
+    "production": "webpack -p --optimize-dedupe --bail --config src/webpack/c_c.config.js"
   },
   "repository": {
     "type": "git",
