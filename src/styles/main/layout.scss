@@ -2,35 +2,98 @@ body {
   background: black;
 }
 
-#maindiv {
+.page-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.marquee {
+  position: fixed;
+
   overflow: hidden;
+
+  max-width: 100vw;
 
   white-space: nowrap;
 
   color: white;
-  border: 2px solid black;
+  font-size: 18px;
+  &.top, &.right {
+    .marquee-running-line-1 {
+      display: inline-block;
+
+      animation: marqueeToRight1 30s linear infinite;
+    }
+
+    .marquee-running-line-2 {
+      display: inline-block;
+
+      animation: marqueeToRight2 30s linear infinite;
+    }
+  }
+  &.bottom, &.left {
+    .marquee-running-line-1 {
+      display: inline-block;
+
+      animation: marqueeToLeft1 30s linear infinite;
+    }
+
+    .marquee-running-line-2 {
+      display: inline-block;
+
+      animation: marqueeToLeft2 30s linear infinite;
+    }
+  }
+  &.top {
+    top: 0;
+    right: 25px;
+    // left: 0;
+    // display: none;
+  }
+  &.right {
+    bottom: 15px;
+    right: 10px;
+
+    transform: rotate(90deg);
+    transform-origin: right;
+  }
+  &.bottom {
+    bottom: 0;
+    left: 25px;
+    // display: none;
+  }
+  &.left {
+    top: 15px;
+    // left: 0;
+    // display: none;
+    // bottom: 0;
+
+    transform: rotate(90deg);
+    transform-origin: left;
+  }
 }
 
-#div1 {
-  display: inline-block;
-  // overflow: hidden;
-
-  // width: 100vw;
-
-  animation: marquee 20s linear infinite;
+@include keyframes(marqueeToRight1) {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
-#div2 {
-  display: inline-block;
-  // overflow: hidden;
-
-  // width: 100vw;
-
-  animation: marquee2 20s linear infinite;
-  // animation-delay: 5s;
+@include keyframes(marqueeToRight2) {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
-@keyframes marquee {
+@include keyframes(marqueeToLeft1) {
   from {
     transform: translateX(0%);
   }
@@ -39,7 +102,7 @@ body {
   }
 }
 
-@keyframes marquee2 {
+@include keyframes(marqueeToLeft2) {
   from {
     transform: translateX(0%);
   }
@@ -47,3 +110,21 @@ body {
     transform: translateX(-100%);
   }
 }
+
+// @keyframes marquee {
+//   from {
+//     transform: translateX(0%);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes marquee2 {
+//   from {
+//     transform: translateX(0%);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
