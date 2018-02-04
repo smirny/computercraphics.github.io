@@ -58,8 +58,7 @@ module.exports = {
     modulesDirectories: ['node_modules']
   },
 
-  // Place all postCSS plugins here, so postcss-loader will apply them
   postcss: function () {
-    return [autoprefixer];
+    return [autoprefixer({ browsers: ['last 5 versions', 'iOS >= 8', 'Safari >= 8'] })];
   }
 }
