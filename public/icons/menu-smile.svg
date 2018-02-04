@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="30px" viewBox="0 0 53 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo / About</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-13.000000, -304.000000)">
+        <g transform="translate(7.000000, 2.000000)" fill="#000000" id="About-Button">
+            <g transform="translate(0.000000, 286.000000)">
+                <g id="Logo-/-About" transform="translate(6.000000, 16.000000)">
+                    <polygon id="Fill-10" points="46.6142103 15.2071753 29.3821072 15.2071753 37.9981588 0"></polygon>
+                    <polygon id="Fill-12" points="24.0393794 15.2071753 6.80727629 15.2071753 15.4233278 0"></polygon>
+                    <path d="M26.4267835,19.2491629 C40.4630412,19.2491629 52.8513814,21.8991629 52.8513814,24.2694103 C52.8513814,26.6391113 40.4630412,29.2962144 26.4267835,29.2962144 C12.3905258,29.2962144 0,26.6391113 0,24.2694103 C0,21.8991629 12.3905258,19.2491629 26.4267835,19.2491629 Z M26.4267835,28.7640289 C37.445866,28.7640289 47.3830928,26.1293278 47.3830928,24.2694103 C47.3830928,22.4094928 37.445866,19.7392763 26.4267835,19.7392763 C15.4055155,19.7392763 5.42239175,22.4094928 5.42239175,24.2694103 C5.42239175,26.1293278 15.4055155,28.7640289 26.4267835,28.7640289 Z" id="Fill-14"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
