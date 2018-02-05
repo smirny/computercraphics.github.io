@@ -1,62 +1,126 @@
 body {
   font-family: $font-family-basic;
 
+  color: white;
   background: black;
 }
 
 .running-lines {
-  // display: none;
+  display: none;
+
+  @include respond-to(medium) {
+    display: block;
+  }
 }
 
 .page-wrapper {
-  margin: $grid*2 $padding-large;
-  .header {
-    margin-bottom: $grid;
+  @include respond-to(medium) {
+    margin: $grid*2 $padding-large;
   }
-  .content {
-    display: flex;
+  .header {
+    margin: $grid;
+    margin-bottom: $padding-large;
 
-    flex-wrap: wrap;
-    .navbar {
-      width: 65px;
-      height: 100%;
-      margin-top: $padding-large;
-      margin-right: $grid/2;
+    @include respond-to(medium) {
+      margin: 0;
+      margin-bottom: $grid;
+    }
+  }
+  .navbar {
+    display: none;
 
-      border: 1px solid black;
-      background: white;
+    width: 65px;
+    height: 100%;
+    margin-top: $padding-large;
+    margin-right: $grid/2;
+
+    border: 1px solid black;
+    background: white;
+
+    @include respond-to(medium) {
+      display: block;
+    }
+    &.mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+
+      width: 100%;
+      height: 54px;
+
+      @include respond-to(medium) {
+        display: none;
+      }
+       > img {
+        margin-top: -1px;
+        margin-left: 2px;
+      }
       a {
+        width: 100%;
+        height: 54px;
+
+        border-right: 1px solid black;
         .square-social {
-          position: relative;
-
-          display: block;
-
-          width: 65px;
-          height: 65px;
-
-          border-bottom: 1px solid black;
-          background: white;
+          width: 100%;
+          height: 54px;
           img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%,-50%);
+            width: 45px;
           }
         }
       }
       .project-switcher {
-        display: flex;
+        display: block;
 
-        margin-top: -1px;
+        width: 27px;
 
         background: black;
         img {
-          margin-left: -1px;
+          display: block;
 
-          cursor: pointer;
+          height: 28px;
         }
       }
+    }
+    a {
+      .square-social {
+        position: relative;
+
+        display: block;
+
+        width: 65px;
+        height: 65px;
+
+        border-bottom: 1px solid black;
+        background: white;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+    .project-switcher {
+      display: flex;
+
+      margin-top: -1px;
+
+      background: black;
+      img {
+        margin-left: -1px;
+
+        cursor: pointer;
+      }
+    }
+  }
+  .content {
+    @include respond-to(medium) {
+      display: flex;
+
+      flex-wrap: wrap;
     }
     .project {
       width: 100%;
@@ -64,22 +128,50 @@ body {
       margin-right: $grid+$padding-large;
       margin-bottom: $grid*2+$padding-large;
 
-      border: 1px solid white;
-
       flex: 1;
+      @include respond-to(medium) {
+        border: 1px solid white;
+      }
+      .scroll-text {
+        max-width: 190px;
+        margin: 0 auto;
+        margin-top: $grid*2;
+        margin-bottom: $padding-large;
+
+        @include respond-to(medium) {
+          display: none;
+        }
+
+        p {
+          font-size: 20px;
+
+          margin-bottom: $grid;
+          padding: 0;
+        }
+      }
+      .video-logo-mobile {
+        max-width: 208px;
+        margin: 0 auto;
+      }
+      &.video {
+        max-width: 1500px;
+      }
       img {
         display: block;
 
         width: 100%;
       }
       .video-line {
-        display: flex;
+        display: none;
 
         width: 100%;
         height: 24px;
+        padding: 3px 0;
 
         flex-wrap: wrap;
-        padding: 3px 0;
+        @include respond-to(medium) {
+          display: flex;
+        }
         .line {
           width: 100%;
           height: 1px;
@@ -166,14 +258,31 @@ body {
 
   height: 0;
   padding-bottom: 56.25%; /* 16:9 */
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .video-logo {
+    position: absolute;
+    right: -$grid*2;
+    bottom: -25px;
+
+    display: none;
+
+    @include respond-to(medium) {
+      display: block;
+    }
+    img {
+      display: block;
+
+      width: 100%;
+      max-width: 208px;
+    }
+  }
 }
 
 @include keyframes(marqueeToRight1) {
