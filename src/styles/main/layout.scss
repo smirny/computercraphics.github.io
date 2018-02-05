@@ -152,6 +152,9 @@ body {
       .video-logo-mobile {
         max-width: 208px;
         margin: 0 auto;
+        @include respond-to(medium) {
+          display: none;
+        }
       }
       &.video {
         max-width: 1500px;
