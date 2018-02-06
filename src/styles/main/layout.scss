@@ -150,14 +150,38 @@ body {
         }
       }
       .video-logo-mobile {
-        max-width: 208px;
+        position: relative;
+
+        width: 208px;
+        height: 208px;
         margin: 0 auto;
+
         @include respond-to(medium) {
           display: none;
         }
+        .images-container {
+          img {
+            position: absolute;
+
+            width: auto !important;
+            &.inner {
+              top: 9%;
+              left: 9%;
+
+              animation: rotationRight 20s linear infinite;
+            }
+            &.outer {
+              animation: rotationLeft 20s linear infinite;
+            }
+            &.center {
+              top: 20%;
+              left: 22%;
+            }
+          }
+        }
       }
       &.video {
-        max-width: 1500px;
+        max-width: calc(73vh * 1.7);
       }
       img {
         display: block;
@@ -276,15 +300,49 @@ body {
 
     display: none;
 
+    width: 208px;
+    height: 208px;
+
     @include respond-to(medium) {
       display: block;
     }
-    img {
-      display: block;
+    .images-container {
+      img {
+        position: absolute;
 
-      width: 100%;
-      max-width: 208px;
+        width: auto !important;
+        &.inner {
+          top: 9%;
+          left: 9%;
+
+          animation: rotationRight 20s linear infinite;
+        }
+        &.outer {
+          animation: rotationLeft 20s linear infinite;
+        }
+        &.center {
+          top: 20%;
+          left: 22%;
+        }
+      }
     }
+  }
+}
+
+@include keyframes(rotationLeft) {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@include keyframes(rotationRight) {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
   }
 }
 
