@@ -116,6 +116,7 @@ body {
   left: 54px;
   display: none;
   padding: 10px;
+  text-align: center;
   color: black;
   border: 1px solid black;
   background: white; }
@@ -126,7 +127,7 @@ body {
   width: 120px; }
 
 .next-btn-popup {
-  width: 110px; }
+  width: 90px; }
 
 @media only screen and (min-width: 768px) {
   .page-wrapper {
