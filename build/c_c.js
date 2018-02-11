@@ -524,7 +524,65 @@
 	__webpack_require__(3);
 
 	document.addEventListener('DOMContentLoaded', function () {
-	  console.log('asd from main asd');
+	  var projects = document.querySelectorAll('.project');
+
+	  var prevBtn = document.querySelectorAll('.prev-btn');
+	  var nextBtn = document.querySelectorAll('.next-btn');
+
+	  var prevBtnPopup = document.querySelector('.prev-btn-popup');
+	  var nextBtnPopup = document.querySelector('.next-btn-popup');
+
+	  var poster = document.querySelector('.poster-wrapper');
+	  var posterScrollTop = document.querySelector('.poster-scroll-top');
+	  var posterScrollBottom = document.querySelector('.poster-scroll-bottom');
+
+	  var current = 0;
+
+	  // project switcher
+	  prevBtn.forEach(function (item, index) {
+	    item.addEventListener('click', function () {
+	      projects[current].classList.remove('active');
+	      current -= 1;
+	      if (current < 0) {
+	        current = projects.length - 1;
+	      }
+	      projects[current].classList.add('active');
+	    });
+	  });
+
+	  nextBtn.forEach(function (item, index) {
+	    item.addEventListener('click', function () {
+	      projects[current].classList.remove('active');
+	      current += 1;
+	      if (current > projects.length - 1) {
+	        current = 0;
+	      }
+	      projects[current].classList.add('active');
+	    });
+	  });
+
+	  // project switcher hover
+	  prevBtn[0].addEventListener('mouseover', function (e) {
+	    prevBtnPopup.classList.add('active');
+	  });
+	  prevBtn[0].addEventListener('mouseleave', function (e) {
+	    prevBtnPopup.classList.remove('active');
+	  });
+
+	  nextBtn[0].addEventListener('mouseover', function (e) {
+	    nextBtnPopup.classList.add('active');
+	  });
+	  nextBtn[0].addEventListener('mouseleave', function (e) {
+	    nextBtnPopup.classList.remove('active');
+	  });
+
+	  // poster scroll
+	  posterScrollTop.addEventListener('click', function () {
+	    poster.scrollTop = poster.scrollTop - 50;
+	  });
+	  posterScrollBottom.addEventListener('click', function () {
+	    poster.scrollTop = poster.scrollTop + 50;
+	  });
 	});
 
 /***/ },
