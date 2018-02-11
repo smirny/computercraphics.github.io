@@ -203,10 +203,18 @@ body {
               top: 9.5%;
               left: 9.5%;
 
+              transform: translate3d(0, 0, 0);
               animation: rotationRight 20s linear infinite;
+
+              perspective: 1000;
+              backface-visibility: hidden;
             }
             &.outer {
+              transform: translate3d(0, 0, 0);
               animation: rotationLeft 20s linear infinite;
+
+              perspective: 1000;
+              backface-visibility: hidden;
             }
             &.center {
               top: 20%;
@@ -338,26 +346,42 @@ body {
     .marquee-running-line-1 {
       display: inline-block;
 
+      transform: translate3d(0, 0, 0);
       animation: marqueeToRight1 30s linear infinite;
+
+      perspective: 1000;
+      backface-visibility: hidden;
     }
 
     .marquee-running-line-2 {
       display: inline-block;
 
+      transform: translate3d(0, 0, 0);
       animation: marqueeToRight2 30s linear infinite;
+
+      perspective: 1000;
+      backface-visibility: hidden;
     }
   }
   &.bottom, &.left {
     .marquee-running-line-1 {
       display: inline-block;
 
+      transform: translate3d(0, 0, 0);
       animation: marqueeToLeft1 30s linear infinite;
+
+      perspective: 1000;
+      backface-visibility: hidden;
     }
 
     .marquee-running-line-2 {
       display: inline-block;
 
+      transform: translate3d(0, 0, 0);
       animation: marqueeToLeft2 30s linear infinite;
+
+      perspective: 1000;
+      backface-visibility: hidden;
     }
   }
   &.top {
@@ -420,10 +444,18 @@ body {
           top: 9.5%;
           left: 9.5%;
 
+          transform: translate3d(0, 0, 0);
           animation: rotationRight 20s linear infinite;
+
+          perspective: 1000;
+          backface-visibility: hidden;
         }
         &.outer {
+          transform: translate3d(0, 0, 0);
           animation: rotationLeft 20s linear infinite;
+
+          perspective: 1000;
+          backface-visibility: hidden;
         }
         &.center {
           top: 20%;
