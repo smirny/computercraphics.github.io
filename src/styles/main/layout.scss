@@ -123,14 +123,21 @@ body {
       flex-wrap: wrap;
     }
     .project {
+      display: none;
+
       width: 100%;
       // max-width: 1280px;
       margin-right: $grid+$padding-large;
       margin-bottom: $grid*2+$padding-large;
 
       flex: 1;
-      @include respond-to(medium) {
-        border: 1px solid white;
+      &.active {
+        &.video {
+          display: block;
+        }
+        &.poster {
+          display: flex;
+        }
       }
       .scroll-text {
         max-width: 190px;
@@ -165,8 +172,8 @@ body {
 
             width: auto !important;
             &.inner {
-              top: 9%;
-              left: 9%;
+              top: 9.5%;
+              left: 9.5%;
 
               animation: rotationRight 20s linear infinite;
             }
@@ -180,8 +187,61 @@ body {
           }
         }
       }
+      &.poster {
+        @include respond-to(medium) {
+          margin-left: $padding-large;
+          .text-wrapper {
+            width: calc(40% - 50px);
+            padding-right: $grid+$padding-large;
+            .description {
+              font-size: 18px;
+
+              margin-top: 100px;
+              margin-bottom: $grid*2;
+            }
+            .tags {
+              font-size: 16px;
+
+              margin-bottom: $grid*3;
+
+              color: $color-grey;
+            }
+            .project-link {
+              a {
+                color: white;
+              }
+            }
+          }
+          .poster-wrapper {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+
+            width: 50%;
+            height: calc(100% - 50px);
+            .poster {
+              position: relative;
+
+              overflow-y: scroll;
+
+              width: 100%;
+              height: 100%;
+              img {
+                // position: absolute;
+                // top: 50%;
+
+                // transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
       &.video {
         max-width: calc(73vh * 1.7);
+
+        @include respond-to(medium) {
+          border: 1px solid white;
+        }
       }
       img {
         display: block;
@@ -312,8 +372,8 @@ body {
 
         width: auto !important;
         &.inner {
-          top: 9%;
-          left: 9%;
+          top: 9.5%;
+          left: 9.5%;
 
           animation: rotationRight 20s linear infinite;
         }
