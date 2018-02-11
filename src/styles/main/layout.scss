@@ -13,6 +13,32 @@ body {
   }
 }
 
+.prev-btn-popup, .next-btn-popup {
+  font-size: 16px;
+
+  position: absolute;
+  z-index: 9;
+  top: 26px;
+  left: 54px;
+
+  display: none;
+
+  padding: $grid/2;
+
+  color: black;
+  border: 1px solid black;
+  background: white;
+  &.active {
+    display: block;
+  }
+}
+.prev-btn-popup {
+  width: 120px;
+}
+.next-btn-popup {
+  width: 110px;
+}
+
 .page-wrapper {
   @include respond-to(medium) {
     margin: $grid*2 $padding-large;
@@ -42,7 +68,7 @@ body {
     }
     &.mobile {
       position: fixed;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
 
       display: flex;
@@ -104,6 +130,8 @@ body {
       }
     }
     .project-switcher {
+      position: relative;
+
       display: flex;
 
       margin-top: -1px;
