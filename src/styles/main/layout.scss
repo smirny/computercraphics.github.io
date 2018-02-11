@@ -188,51 +188,68 @@ body {
         }
       }
       &.poster {
+        flex-wrap: wrap-reverse;
         @include respond-to(medium) {
           margin-left: $padding-large;
-          .text-wrapper {
-            width: calc(40% - 50px);
-            padding-right: $grid+$padding-large;
-            .description {
-              font-size: 18px;
 
+          flex-wrap: initial;
+        }
+        .text-wrapper {
+          padding: $grid $grid/2;
+
+          @include respond-to(medium) {
+            width: calc(40% - 50px);
+            padding: 0;
+            padding-right: $grid+$padding-large;
+          }
+          .description {
+            font-size: 18px;
+
+            @include respond-to(medium) {
               margin-top: 100px;
               margin-bottom: $grid*2;
             }
-            .tags {
-              font-size: 16px;
+          }
+          .tags {
+            font-size: 16px;
 
+            margin: $padding-large 0;
+
+            color: $color-grey;
+
+            @include respond-to(medium) {
+              margin: 0;
               margin-bottom: $grid*3;
-
-              color: $color-grey;
-            }
-            .project-link {
-              a {
-                color: white;
-              }
             }
           }
-          .poster-wrapper {
+          .project-link {
+            a {
+              color: white;
+            }
+          }
+        }
+        .poster-wrapper {
+          overflow: hidden;
+
+          width: 100%;
+          max-height: 410px;
+
+          @include respond-to(medium) {
             position: absolute;
             top: 25px;
             right: 25px;
 
             width: 50%;
             height: calc(100% - 50px);
-            .poster {
-              position: relative;
+            max-height: none;
+          }
+          .poster {
+            position: relative;
 
-              overflow-y: scroll;
+            overflow-y: scroll;
 
-              width: 100%;
-              height: 100%;
-              img {
-                // position: absolute;
-                // top: 50%;
-
-                // transform: translateY(-50%);
-              }
-            }
+            width: 100%;
+            height: 100%;
           }
         }
       }
