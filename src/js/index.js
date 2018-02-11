@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtnPopup = document.querySelector('.prev-btn-popup');
   const nextBtnPopup = document.querySelector('.next-btn-popup');
 
+  const poster = document.querySelector('.poster-wrapper');
+  const posterScrollTop = document.querySelector('.poster-scroll-top');
+  const posterScrollBottom = document.querySelector('.poster-scroll-bottom');
+
   let current = 0;
 
   // project switcher
@@ -49,5 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   nextBtn[0].addEventListener('mouseleave', (e) => {
     nextBtnPopup.classList.remove('active');
+  });
+
+  // poster scroll
+  posterScrollTop.addEventListener('click', () => {
+    poster.scrollTop = (poster.scrollTop - 50);
+  });
+  posterScrollBottom.addEventListener('click', () => {
+    poster.scrollTop = (poster.scrollTop + 50);
   });
 });
