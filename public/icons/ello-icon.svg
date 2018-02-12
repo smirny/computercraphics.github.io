@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ello-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C_C_panel" transform="translate(-35.000000, -484.000000)">
+            <g id="ello-icon" transform="translate(35.000000, 484.000000)">
+                <polygon id="Fill-20" fill="#ACAEAA" points="0.597 20.159 20.396 20.159 20.396 0.36 0.597 0.36"></polygon>
+                <polygon id="Fill-21" fill="#FFFFFE" points="20.396 20.159 40.195 20.159 40.195 0.36 20.396 0.36"></polygon>
+                <polygon id="Fill-22" fill="#ACAEAA" points="40.195 20.159 59.994 20.159 59.994 0.36 40.195 0.36"></polygon>
+                <polygon id="Fill-23" fill="#FFFFFE" points="59.994 20.159 79.792 20.159 79.792 0.36 59.994 0.36"></polygon>
+                <polygon id="Fill-24" fill="#ACAEAA" points="59.994 39.958 79.792 39.958 79.792 20.159 59.994 20.159"></polygon>
+                <polygon id="Fill-25" fill="#FFFFFE" points="40.195 39.958 59.994 39.958 59.994 20.159 40.195 20.159"></polygon>
+                <polygon id="Fill-26" fill="#ACAEAA" points="20.396 39.958 40.195 39.958 40.195 20.159 20.396 20.159"></polygon>
+                <polygon id="Fill-27" fill="#FFFFFE" points="0.597 39.958 20.396 39.958 20.396 20.159 0.597 20.159"></polygon>
+                <polygon id="Fill-28" fill="#ACAEAA" points="0.597 59.757 20.396 59.757 20.396 39.958 0.597 39.958"></polygon>
+                <polygon id="Fill-29" fill="#FFFFFE" points="20.396 59.757 40.195 59.757 40.195 39.958 20.396 39.958"></polygon>
+                <polygon id="Fill-30" fill="#ACAEAA" points="40.195 59.757 59.994 59.757 59.994 39.958 40.195 39.958"></polygon>
+                <polygon id="Fill-31" fill="#FFFFFE" points="59.994 59.757 79.792 59.757 79.792 39.958 59.994 39.958"></polygon>
+                <polygon id="Fill-32" fill="#ACAEAA" points="59.994 79.555 79.792 79.555 79.792 59.757 59.994 59.757"></polygon>
+                <polygon id="Fill-33" fill="#FFFFFE" points="40.195 79.555 59.994 79.555 59.994 59.757 40.195 59.757"></polygon>
+                <polygon id="Fill-34" fill="#ACAEAA" points="20.396 79.555 40.195 79.555 40.195 59.757 20.396 59.757"></polygon>
+                <polygon id="Fill-35" fill="#FFFFFE" points="0.597 79.555 20.396 79.555 20.396 59.757 0.597 59.757"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
