@@ -59,16 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // poster scroll
   posterScrollTop.forEach((item, index) => {
     item.addEventListener('click', () => {
-      scrollDiv(true, item.parentNode.parentNode.children[0], 0);
+      scrollDiv(true, item.parentNode.parentNode.children[0], 0, item.parentNode.parentNode.children[0].children);
     });
   });
   posterScrollBottom.forEach((item, index) => {
     item.addEventListener('click', () => {
-      scrollDiv(false, item.parentNode.parentNode.children[0], 1000);
+      scrollDiv(false, item.parentNode.parentNode.children[0], 20000, item.parentNode.parentNode.children[0].children);
     });
   });
 
-  function scrollDiv(maxScroll, divElem, previousScrollTop) {
+  function scrollDiv(maxScroll, divElem, previousScrollTop, imgs) {
+    console.log(imgs)
     if (maxScroll) {
       divElem.scrollTop = -previousScrollTop;
     }
