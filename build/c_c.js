@@ -580,16 +580,17 @@
 	  // poster scroll
 	  posterScrollTop.forEach(function (item, index) {
 	    item.addEventListener('click', function () {
-	      scrollDiv(true, item.parentNode.parentNode.children[0], 0);
+	      scrollDiv(true, item.parentNode.parentNode.children[0], 0, item.parentNode.parentNode.children[0].children);
 	    });
 	  });
 	  posterScrollBottom.forEach(function (item, index) {
 	    item.addEventListener('click', function () {
-	      scrollDiv(false, item.parentNode.parentNode.children[0], 1000);
+	      scrollDiv(false, item.parentNode.parentNode.children[0], 20000, item.parentNode.parentNode.children[0].children);
 	    });
 	  });
 
-	  function scrollDiv(maxScroll, divElem, previousScrollTop) {
+	  function scrollDiv(maxScroll, divElem, previousScrollTop, imgs) {
+	    console.log(imgs);
 	    if (maxScroll) {
 	      divElem.scrollTop = -previousScrollTop;
 	    } else {
