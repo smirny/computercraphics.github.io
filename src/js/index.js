@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtnPopup = document.querySelector('.prev-btn-popup');
   const nextBtnPopup = document.querySelector('.next-btn-popup');
 
-  const poster = document.querySelector('.poster-wrapper');
-  const posterScrollTop = document.querySelector('.poster-scroll-top');
-  const posterScrollBottom = document.querySelector('.poster-scroll-bottom');
+  const posterScrollTop = document.querySelectorAll('.poster-scroll-top');
+  const posterScrollBottom = document.querySelectorAll('.poster-scroll-bottom');
+
+  const posterScroll = document.querySelectorAll('.project.poster > .poster-wrapper > .poster');
 
   let current = 0;
 
@@ -56,10 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // poster scroll
-  posterScrollTop.addEventListener('click', () => {
-    poster.scrollTop = (poster.scrollTop - 50);
+  posterScrollTop.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      scrollDiv(true, item.parentNode.parentNode.children[0], 0);
+    });
   });
-  posterScrollBottom.addEventListener('click', () => {
-    poster.scrollTop = (poster.scrollTop + 50);
+  posterScrollBottom.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      scrollDiv(false, item.parentNode.parentNode.children[0], 1000);
+    });
   });
+
+  function scrollDiv(maxScroll, divElem, previousScrollTop) {
+    if (maxScroll) {
+      divElem.scrollTop = -previousScrollTop;
+    }
+    else {
+      divElem.scrollTop = previousScrollTop;
+    }
+  }
+
 });
