@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const posterScrollTop = document.querySelectorAll('.poster-scroll-top');
   const posterScrollBottom = document.querySelectorAll('.poster-scroll-bottom');
 
+  const posterScrollBtns = document.querySelectorAll('.poster-wrapper > .poster-scroll');
+
   const posterScroll = document.querySelectorAll('.project.poster > .poster-wrapper > .poster');
 
   let current = 0;
@@ -57,16 +59,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // poster scroll
-  posterScrollTop.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      scrollDiv(true, item.parentNode.parentNode.children[0], 0);
+  let scrollBtnsTop = [];
+  let scrollBtnsBot = [];
+
+  let scrollRate = [];
+
+  posterScrollBtns.forEach((item, i) => {
+    scrollBtnsTop[i] = item.children[0];
+    scrollBtnsBot[i] = item.children[1];
+    scrollRate[i] = 0;
+
+    scrollBtnsTop[i].addEventListener('click', () => {
+      if (scrollRate[i] <= 0) {
+        scrollRate[i] = 0;
+      } else {
+        scrollRate[i] += -100;
+      }
+      scrollDiv(false, scrollBtnsTop[i].parentNode.parentNode.children[0], scrollRate[i]);
+    });
+    scrollBtnsBot[i].addEventListener('click', () => {
+      scrollRate[i] += 100;
+      scrollDiv(false, scrollBtnsBot[i].parentNode.parentNode.children[0], scrollRate[i]);
     });
   });
-  posterScrollBottom.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      scrollDiv(false, item.parentNode.parentNode.children[0], 20000);
-    });
-  });
+
+  // posterScrollTop.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     scrollDiv(true, item.parentNode.parentNode.children[0], 0);
+  //   });
+  // });
+  // posterScrollBottom.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     scrollDiv(false, item.parentNode.parentNode.children[0], 20000);
+  //   });
+  // });
 
   function scrollDiv(maxScroll, divElem, previousScrollTop) {
     if (maxScroll) {
