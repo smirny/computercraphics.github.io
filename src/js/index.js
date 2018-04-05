@@ -1,6 +1,20 @@
 'use strict';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Main from './components/Main';
+
 import '../styles/main.scss';
+
+document.addEventListener('DOMContentLoaded', () => {
+  var mainApp = document.querySelector('#page-wrapper');
+
+  if (mainApp) {
+    ReactDOM.render(<Main />, mainApp);
+  }
+});
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const projects = document.querySelectorAll('.project');
