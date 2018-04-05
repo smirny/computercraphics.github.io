@@ -12,10 +12,34 @@ config.output = {
   path: './build',
 };
 
-config.plugins = [
-  new ExtractTextPlugin('c_c.css', {
-    allChunks: true
-  }),
-]
+if (process.env.NODE_ENV === 'production') {
+  config.plugins = [
+    new ExtractTextPlugin('c_c.css', {
+      allChunks: true
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react'
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    })
+  ]
+} else {
+  config.plugins = [
+    new ExtractTextPlugin('c_c.css', {
+      allChunks: true
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react'
+    })
+  ]
+}
 
 module.exports = config;

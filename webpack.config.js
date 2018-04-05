@@ -30,7 +30,7 @@ module.exports = {
         // Options to configure babel with
         query: {
           plugins: ['transform-runtime'],
-          presets: ['es2015', 'stage-0'],
+          presets: ['es2015', 'stage-0', 'react'],
         }
       }, {
         test: /\.modernizrrc$/, loader: 'modernizr'
@@ -60,5 +60,14 @@ module.exports = {
 
   postcss: function () {
     return [autoprefixer({ browsers: ['last 5 versions', 'iOS >= 8', 'Safari >= 8'] })];
-  }
+  },
+
+  plugins: [
+    new ExtractTextPlugin('../stylesheets/react_bundle.css', {
+      allChunks: true
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react'
+    })
+  ]
 }
