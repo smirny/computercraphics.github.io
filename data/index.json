@@ -1,0 +1,92 @@
+{
+  "projects": [
+    {
+      "url": "",
+      "type": "video",
+      "description": "",
+      "project_link": "",
+      "link_name": "",
+      "tags": "",
+      "assets": [
+        "https://player.vimeo.com/video/250342379?byline=0&portrait=0"
+      ]
+    },
+    {
+      "url": "crew",
+      "type": "poster",
+      "description": "C_C is a fashion digital bodega founded by two brothers Andrey and Denis. We create insane digital projects, contact us if you wanna create something truely great. Btw we got office in LA and NY.",
+      "project_link": "",
+      "link_name": "",
+      "tags": "#tag one, #tag two, #tag three.",
+      "assets": [
+        "/public/images/project-poster-1.png"
+      ]
+    },
+    {
+      "url": "gumgum-techcrunch",
+      "type": "poster",
+      "description": "How video game tech makes neural networks possible <br> <br> GPU [Graphic Pretty Underrated] man is a series of illustrations in collaboration with GumGum for TechCrunch. AD Bryan Bartlett",
+      "project_link": "https://techcrunch.com/2017/10/27/how-video-game-tech-makes-neural-networks-possible/",
+      "link_name": "Article itself",
+      "tags": "#c_c_inc, #computer vision, #computer art, #techrunch, #gumgum.",
+      "assets": [
+        "/public/gifs/game_tech/game_tech_1.gif",
+        "/public/gifs/game_tech/game_tech_2.gif",
+        "/public/gifs/game_tech/game_tech_3.gif",
+        "/public/gifs/game_tech/game_tech_4.gif",
+        "/public/gifs/game_tech/game_tech_5.png"
+      ]
+    },
+    {
+      "url": "google-illustrations",
+      "type": "poster",
+      "description": "Thanks to our friends at @google for this super fun and exciting project! Series of concept illustrations by @computer_craphics for @google. Stay tuned for more awesome content!!",
+      "project_link": "",
+      "link_name": "",
+      "tags": "#google.",
+      "assets": [
+        "/public/gifs/google_proj/google_proj.gif"
+      ]
+    },
+    {
+      "url": "gumguminc-techcrunch",
+      "type": "poster",
+      "description": "We’re excited to share the new set of illustrations we’ve been working on with @gumguminc for a @techcrunch article!",
+      "project_link": "https://techcrunch.com/2017/07/21/why-the-future-of-deep-learning-depends-on-finding-good-data/",
+      "link_name": "Article itself",
+      "tags": "#computer vision, #machine learning, #neural networks, #computer vision, #datascience, #techrunch.",
+      "assets": [
+        "/public/gifs/techrunch_gumguminc/techrunch_gumguminc_1.gif",
+        "/public/gifs/techrunch_gumguminc/techrunch_gumguminc_2.gif",
+        "/public/gifs/techrunch_gumguminc/techrunch_gumguminc_3.gif",
+        "/public/gifs/techrunch_gumguminc/techrunch_gumguminc_4.png",
+        "/public/gifs/techrunch_gumguminc/techrunch_gumguminc_5.gif"
+      ]
+    },
+    {
+      "url": "gumguminc-techcrunch-2",
+      "type": "poster",
+      "description": "Dear strangers and followers, we’ve successfully completed our first commercial project with @gumguminc for @techcrunch. Thanks everyone for your awesome support, stay tuned for more exciting content!!",
+      "project_link": "",
+      "link_name": "",
+      "tags": "#computer vision, #machine learning, #neural networks, #datascience, #techrunch.",
+      "assets": [
+        "/public/gifs/techrunch_gumguminc_2/techrunch_gumguminc_1.gif",
+        "/public/gifs/techrunch_gumguminc_2/techrunch_gumguminc_2.gif",
+        "/public/gifs/techrunch_gumguminc_2/techrunch_gumguminc_3.gif",
+        "/public/gifs/techrunch_gumguminc_2/techrunch_gumguminc_4.gif"
+      ]
+    },
+    {
+      "url": "microchips",
+      "type": "poster",
+      "description": "[02.15.2017] MICROCHIPS/MACRODIPS 2D",
+      "project_link": "",
+      "link_name": "",
+      "tags": "#computer vision, #machine learning, #neural networks, #datascience, #techrunch, #artificial intelligence.",
+      "assets": [
+        "/public/gifs/microchips_macrodips/microchips_macrodips.gif"
+      ]
+    }
+  ]
+}
