@@ -153,9 +153,6 @@ body {
 
       flex-wrap: wrap;
     }
-    > div {
-      // flex: 1;
-    }
     .project {
       // display: none;
 
@@ -235,6 +232,15 @@ body {
           margin-left: $padding-large;
 
           flex-wrap: initial;
+        }
+        > div {
+          flex-wrap: wrap-reverse;
+          display: flex;
+          @include respond-to(medium) {
+            margin-left: $padding-large;
+
+            flex-wrap: initial;
+          }
         }
         .text-wrapper {
           padding: $grid $grid/2;
