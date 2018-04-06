@@ -153,8 +153,11 @@ body {
 
       flex-wrap: wrap;
     }
+    > div {
+      // flex: 1;
+    }
     .project {
-      display: none;
+      // display: none;
 
       width: 100%;
       // max-width: 1280px;
@@ -162,14 +165,14 @@ body {
       margin-bottom: $grid*2+$padding-large;
 
       flex: 1;
-      &.active {
-        &.video {
-          display: block;
-        }
-        &.poster {
-          display: flex;
-        }
+      // &.active {
+      &.video {
+        display: block;
       }
+      &.poster {
+        display: flex;
+      }
+      // }
       .scroll-text {
         max-width: 190px;
         margin: 0 auto;
