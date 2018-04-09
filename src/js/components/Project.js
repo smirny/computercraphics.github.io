@@ -2,7 +2,7 @@
 
 import React, { Component, PropTypes } from 'react';
 
-import { posterScrollFunc } from '../index.js';
+import { posterScrollFunc } from '../vanila.js';
 
 class Project extends Component {
   constructor(props) {

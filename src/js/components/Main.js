@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Project from './Project';
 
-import { multiply, switcherHover } from '../index.js';
+import { multiply, switcherHover } from '../vanila.js';
 
 class Main extends Component {
   constructor(props) {
