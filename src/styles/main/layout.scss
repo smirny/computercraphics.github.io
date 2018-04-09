@@ -13,7 +13,7 @@ body {
   }
 }
 
-.prev-btn-popup, .next-btn-popup {
+.btn-popup {
   font-size: 16px;
 
   position: absolute;
@@ -26,6 +26,7 @@ body {
   padding: $grid/2;
 
   text-align: center;
+  white-space: nowrap;
 
   color: black;
   border: 1px solid black;
@@ -33,12 +34,6 @@ body {
   &.active {
     display: block;
   }
-}
-.prev-btn-popup {
-  width: 120px;
-}
-.next-btn-popup {
-  width: 90px;
 }
 
 .page-wrapper {
@@ -52,6 +47,9 @@ body {
     @include respond-to(medium) {
       margin: 0;
       margin-bottom: $grid;
+    }
+    img {
+      cursor: pointer;
     }
   }
   .navbar {
@@ -126,6 +124,7 @@ body {
           position: absolute;
           top: 50%;
           left: 50%;
+
           width: 45px;
 
           transform: translate(-50%,-50%);
@@ -155,7 +154,6 @@ body {
     }
     .project {
       // display: none;
-
       width: 100%;
       // max-width: 1280px;
       margin-right: $grid+$padding-large;
@@ -233,9 +231,10 @@ body {
 
           flex-wrap: initial;
         }
-        > div {
-          flex-wrap: wrap-reverse;
+         > div {
           display: flex;
+
+          flex-wrap: wrap-reverse;
           @include respond-to(medium) {
             margin-left: $padding-large;
 

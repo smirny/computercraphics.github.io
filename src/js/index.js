@@ -33,13 +33,6 @@ export function multiply(x, y) {
 
 const projects = document.querySelectorAll('.project');
 
-const posterScrollTop = document.querySelectorAll('.poster-scroll-top');
-const posterScrollBottom = document.querySelectorAll('.poster-scroll-bottom');
-
-const posterScrollBtns = document.querySelectorAll('.poster-wrapper > .poster-scroll');
-
-const posterScroll = document.querySelectorAll('.project.poster > .poster-wrapper > .poster');
-
 let current = 0;
 
 // project switcher
@@ -89,29 +82,41 @@ export function switcherHover() {
 }
 
 // poster scroll
-let scrollBtnsTop = [];
-let scrollBtnsBot = [];
+export function posterScrollFunc() {
+  console.log('init');
+  const posterScrollTop = document.querySelectorAll('.poster-scroll-top');
+  const posterScrollBottom = document.querySelectorAll('.poster-scroll-bottom');
 
-let scrollRate = [];
+  const posterScrollBtns = document.querySelectorAll('.poster-wrapper > .poster-scroll');
 
-posterScrollBtns.forEach((item, i) => {
-  scrollBtnsTop[i] = item.children[0];
-  scrollBtnsBot[i] = item.children[1];
-  scrollRate[i] = 0;
+  const posterScroll = document.querySelectorAll('.project.poster > .poster-wrapper > .poster');
 
-  scrollBtnsTop[i].addEventListener('click', () => {
-    if (scrollRate[i] <= 0) {
-      scrollRate[i] = 0;
-    } else {
-      scrollRate[i] += -100;
-    }
-    scrollDiv(false, scrollBtnsTop[i].parentNode.parentNode.children[0], scrollRate[i]);
+  let scrollBtnsTop = [];
+  let scrollBtnsBot = [];
+
+  let scrollRate = [];
+
+  posterScrollBtns.forEach((item, i) => {
+    scrollBtnsTop[i] = item.children[0];
+    scrollBtnsBot[i] = item.children[1];
+    scrollRate[i] = 0;
+
+    scrollBtnsTop[i].addEventListener('click', () => {
+      if (scrollRate[i] <= 0) {
+        scrollRate[i] = 0;
+      } else {
+        scrollRate[i] += -100;
+      }
+      scrollDiv(false, scrollBtnsTop[i].parentNode.parentNode.children[0], scrollRate[i]);
+      console.log(scrollRate);
+    });
+    scrollBtnsBot[i].addEventListener('click', () => {
+      scrollRate[i] += 100;
+      scrollDiv(false, scrollBtnsBot[i].parentNode.parentNode.children[0], scrollRate[i]);
+      console.log(scrollRate);
+    });
   });
-  scrollBtnsBot[i].addEventListener('click', () => {
-    scrollRate[i] += 100;
-    scrollDiv(false, scrollBtnsBot[i].parentNode.parentNode.children[0], scrollRate[i]);
-  });
-});
+}
 
 // posterScrollTop.forEach((item, index) => {
 //   item.addEventListener('click', () => {

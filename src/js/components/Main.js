@@ -56,6 +56,24 @@ class Main extends Component {
       });
 
       window.history.pushState(projectID, 'C_C', '?' + data[projectID].url);
+    } else if (direction === 'home') {
+      projectID = 0
+
+      this.setState({
+        currentPath: data[projectID].url,
+        projectID: projectID
+      });
+
+      window.history.pushState(projectID, 'C_C', '?' + data[projectID].url);
+    } else if (direction === 'crew') {
+      projectID = 1
+
+      this.setState({
+        currentPath: data[projectID].url,
+        projectID: projectID
+      });
+
+      window.history.pushState(projectID, 'C_C', '?' + data[projectID].url);
     } else {
       projectID === 0 ? projectID = maxID : projectID -= 1
 
@@ -72,41 +90,40 @@ class Main extends Component {
     return (
       <div>
         <div className="header">
-          <img src="./public/icons/c_c-logo.svg" alt="" />
+          <img src="./public/icons/c_c-logo.svg" alt="" onClick={::this.projectSwitcher.bind(this, 'home')}/>
         </div>
         <div className="content">
           <div className="navbar">
             <img src="./public/icons/menu-top-bar.svg" alt="" />
             <a target="_blank" href="https://www.facebook.com/computercraphics/">
-              <span className="square-social">
+              <span className="square-social" id="facebook-social">
                 <img src="./public/icons/facebook-icon.svg" alt="" />
               </span>
             </a>
             <a target="_blank" href="https://www.instagram.com/computer_craphics">
-              <span className="square-social">
+              <span className="square-social" id="instagram-social">
                 <img src="./public/icons/instagram-icon.svg" alt="" />
               </span>
             </a>
             <a target="_blank" href="https://ru.pinterest.com/comutercraphics/">
-              <span className="square-social">
+              <span className="square-social" id="pinterest-social">
                 <img src="./public/icons/pinterest-icon.svg" alt="" />
               </span>
             </a>
             <a target="_blank" href="https://ello.co/computer_craphics">
-              <span className="square-social">
+              <span className="square-social" id="ello-social">
                 <img src="./public/icons/ello-icon.svg" alt="" />
               </span>
             </a>
             <a href="#">
-              <span className="square-social">
+              <span className="square-social" onClick={::this.projectSwitcher.bind(this, 'crew')} id="crew-social">
                 <img src="./public/icons/menu-smile.svg" alt="" />
               </span>
             </a>
             <div className="project-switcher">
               <div className="prev-btn" onClick={::this.projectSwitcher.bind(this, 'prev')}><img src="./public/icons/arrow-left.svg" alt="" /></div>
               <div className="next-btn" onClick={::this.projectSwitcher.bind(this, 'next')}><img src="./public/icons/arrow-right.svg" alt="" /></div>
-              <div className="prev-btn-popup">Previous project</div>
-              <div className="next-btn-popup">Next project</div>
+              <div className="btn-popup">Next project</div>
             </div>
           </div>
           <Project project={this.props.data[this.state.projectID]}/>
@@ -133,8 +150,8 @@ class Main extends Component {
               <img src="./public/icons/ello-icon.svg" alt="" />
             </span>
           </a>
-          <a href="#">
-            <span className="square-social">
+          <a href="">
+            <span className="square-social" onClick={::this.projectSwitcher.bind(this, 'crew')}>
               <img src="./public/icons/menu-smile.svg" alt="" />
             </span>
           </a>

@@ -2,12 +2,22 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import { posterScrollFunc } from '../index.js';
+
 class Project extends Component {
   constructor(props) {
     super(props);
     // this.state = {
     //   project: this.props.project
     // }
+  }
+
+  componentDidMount() {
+    posterScrollFunc();
+  }
+
+  componentWillReceiveProps() {
+    posterScrollFunc();
   }
 
   render() {
