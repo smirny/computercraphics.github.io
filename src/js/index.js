@@ -63,27 +63,30 @@ export function switcherHover() {
   const prevBtn = document.querySelectorAll('.prev-btn');
   const nextBtn = document.querySelectorAll('.next-btn');
 
-  const prevBtnPopup = document.querySelector('.prev-btn-popup');
-  const nextBtnPopup = document.querySelector('.next-btn-popup');
+  const crewBtn = document.querySelector('#crew-social');
+  const elloBtn = document.querySelector('#ello-social');
+  const pinterestBtn = document.querySelector('#pinterest-social');
+  const instagramBtn = document.querySelector('#instagram-social');
+  const facebookBtn = document.querySelector('#facebook-social');
 
-  prevBtn[0].addEventListener('mouseover', (e) => {
-    prevBtnPopup.classList.add('active');
-  });
-  prevBtn[0].addEventListener('mouseleave', (e) => {
-    prevBtnPopup.classList.remove('active');
-  });
+  const btnPopup = document.querySelector('.btn-popup');
 
-  nextBtn[0].addEventListener('mouseover', (e) => {
-    nextBtnPopup.classList.add('active');
-  });
-  nextBtn[0].addEventListener('mouseleave', (e) => {
-    nextBtnPopup.classList.remove('active');
-  });
+  const hoverArr = [ prevBtn[0] ,nextBtn[0] ,crewBtn ,elloBtn ,pinterestBtn ,instagramBtn ,facebookBtn ];
+  const hoverArrWords = [ 'Previous project' , 'Next project' , 'Crew' , 'Ello' , 'Pinterest' , 'Instagram' , 'Facebook' ];
+
+  hoverArr.forEach((item, index) => {
+    item.addEventListener('mouseover', (e) => {
+      btnPopup.innerHTML = hoverArrWords[index];
+      btnPopup.classList.add('active');
+    });
+    item.addEventListener('mouseleave', (e) => {
+      btnPopup.classList.remove('active');
+    });
+  })
 }
 
 // poster scroll
 export function posterScrollFunc() {
-  console.log('init');
   const posterScrollTop = document.querySelectorAll('.poster-scroll-top');
   const posterScrollBottom = document.querySelectorAll('.poster-scroll-bottom');
 
@@ -108,12 +111,10 @@ export function posterScrollFunc() {
         scrollRate[i] += -100;
       }
       scrollDiv(false, scrollBtnsTop[i].parentNode.parentNode.children[0], scrollRate[i]);
-      console.log(scrollRate);
     });
     scrollBtnsBot[i].addEventListener('click', () => {
       scrollRate[i] += 100;
       scrollDiv(false, scrollBtnsBot[i].parentNode.parentNode.children[0], scrollRate[i]);
-      console.log(scrollRate);
     });
   });
 }
