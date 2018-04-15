@@ -34,8 +34,6 @@ export function posterScrollFunc() {
 
   const posterScrollBtns = document.querySelectorAll('.poster-wrapper > .poster-scroll');
 
-  const posterScroll = document.querySelectorAll('.project.poster > .poster-wrapper > .poster');
-
   let scrollBtnsTop = [];
   let scrollBtnsBot = [];
 
