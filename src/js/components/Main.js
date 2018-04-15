@@ -16,8 +16,14 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    // multiply(2, 3);
     switcherHover();
+
+    window.addEventListener('popstate', function() {
+      const availableUrls = this.props.data.map(project => project.url);
+      const currentUrl = window.location.search.substring(1);
+
+      this.setProject(availableUrls, currentUrl);
+    }.bind(this));
   }
 
   componentWillMount() {
