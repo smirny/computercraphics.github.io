@@ -297,11 +297,15 @@ body {
             max-height: none;
           }
           &.centered {
+            max-height: none;
+
             .poster {
               img {
-                width: auto;
-                height: 100%;
-                margin-left: auto;
+                @include respond-to(medium) {
+                  width: auto;
+                  height: 100%;
+                  margin-left: auto;
+                }
               }
             }
             .poster-scroll {
