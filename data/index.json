@@ -3,6 +3,7 @@
     {
       "url": "",
       "type": "video",
+      "centered": "",
       "description": "",
       "project_link": "",
       "link_name": "",
@@ -14,6 +15,7 @@
     {
       "url": "crew",
       "type": "poster",
+      "centered": "centered",
       "description": "C_C is a fashion digital bodega founded by two brothers Andrey and Denis. We create insane digital projects, contact us if you wanna create something truely great. Btw we got office in LA and NY.",
       "project_link": "",
       "link_name": "",
@@ -25,6 +27,7 @@
     {
       "url": "gumgum-techcrunch",
       "type": "poster",
+      "centered": "",
       "description": "How video game tech makes neural networks possible <br> <br> GPU [Graphic Pretty Underrated] man is a series of illustrations in collaboration with GumGum for TechCrunch. AD Bryan Bartlett",
       "project_link": "https://techcrunch.com/2017/10/27/how-video-game-tech-makes-neural-networks-possible/",
       "link_name": "Article itself",
@@ -40,6 +43,7 @@
     {
       "url": "google-illustrations",
       "type": "poster",
+      "centered": "centered",
       "description": "Thanks to our friends at @google for this super fun and exciting project! Series of concept illustrations by @computer_craphics for @google. Stay tuned for more awesome content!!",
       "project_link": "",
       "link_name": "",
@@ -51,6 +55,7 @@
     {
       "url": "gumguminc-techcrunch",
       "type": "poster",
+      "centered": "",
       "description": "We’re excited to share the new set of illustrations we’ve been working on with @gumguminc for a @techcrunch article!",
       "project_link": "https://techcrunch.com/2017/07/21/why-the-future-of-deep-learning-depends-on-finding-good-data/",
       "link_name": "Article itself",
@@ -66,6 +71,7 @@
     {
       "url": "gumguminc-techcrunch-2",
       "type": "poster",
+      "centered": "",
       "description": "Dear strangers and followers, we’ve successfully completed our first commercial project with @gumguminc for @techcrunch. Thanks everyone for your awesome support, stay tuned for more exciting content!!",
       "project_link": "",
       "link_name": "",
@@ -80,6 +86,7 @@
     {
       "url": "microchips",
       "type": "poster",
+      "centered": "centered",
       "description": "[02.15.2017] MICROCHIPS/MACRODIPS 2D",
       "project_link": "",
       "link_name": "",

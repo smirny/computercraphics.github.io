@@ -296,6 +296,18 @@ body {
             height: calc(100% - 50px);
             max-height: none;
           }
+          &.centered {
+            .poster {
+              img {
+                width: auto;
+                height: 100%;
+                margin-left: auto;
+              }
+            }
+            .poster-scroll {
+              display: none;
+            }
+          }
           .poster {
             position: relative;
 
@@ -375,8 +387,8 @@ body {
   &.top, &.right {
     .marquee-running-line-1 {
       display: inline-block;
-
       // transform: translate3d(0, 0, 0);
+
       animation: marqueeToRight1 30s linear infinite;
 
       // perspective: 1000;
@@ -385,8 +397,8 @@ body {
 
     .marquee-running-line-2 {
       display: inline-block;
-
       // transform: translate3d(0, 0, 0);
+
       animation: marqueeToRight2 30s linear infinite;
 
       // perspective: 1000;
@@ -396,8 +408,8 @@ body {
   &.bottom, &.left {
     .marquee-running-line-1 {
       display: inline-block;
-
       // transform: translate3d(0, 0, 0);
+
       animation: marqueeToLeft1 30s linear infinite;
 
       // perspective: 1000;
@@ -406,8 +418,8 @@ body {
 
     .marquee-running-line-2 {
       display: inline-block;
-
       // transform: translate3d(0, 0, 0);
+
       animation: marqueeToLeft2 30s linear infinite;
 
       // perspective: 1000;

@@ -71,7 +71,7 @@ class Project extends Component {
                   <div></div>
               }
             </div>
-            <div className="poster-wrapper">
+            <div className={"poster-wrapper" + " " + this.props.project.centered}>
               <div className="poster">
                 { this.props.project.assets.map((asset, key) =>
                   <img src={asset} key={key} alt="" />
