@@ -1,8 +1,14 @@
 body {
   font-family: $font-family-basic;
 
+  padding: 0;
+
   color: white;
   background: black;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
 }
 
 .running-lines {
@@ -370,42 +376,42 @@ body {
     .marquee-running-line-1 {
       display: inline-block;
 
-      transform: translate3d(0, 0, 0);
+      // transform: translate3d(0, 0, 0);
       animation: marqueeToRight1 30s linear infinite;
 
-      perspective: 1000;
-      backface-visibility: hidden;
+      // perspective: 1000;
+      // backface-visibility: hidden;
     }
 
     .marquee-running-line-2 {
       display: inline-block;
 
-      transform: translate3d(0, 0, 0);
+      // transform: translate3d(0, 0, 0);
       animation: marqueeToRight2 30s linear infinite;
 
-      perspective: 1000;
-      backface-visibility: hidden;
+      // perspective: 1000;
+      // backface-visibility: hidden;
     }
   }
   &.bottom, &.left {
     .marquee-running-line-1 {
       display: inline-block;
 
-      transform: translate3d(0, 0, 0);
+      // transform: translate3d(0, 0, 0);
       animation: marqueeToLeft1 30s linear infinite;
 
-      perspective: 1000;
-      backface-visibility: hidden;
+      // perspective: 1000;
+      // backface-visibility: hidden;
     }
 
     .marquee-running-line-2 {
       display: inline-block;
 
-      transform: translate3d(0, 0, 0);
+      // transform: translate3d(0, 0, 0);
       animation: marqueeToLeft2 30s linear infinite;
 
-      perspective: 1000;
-      backface-visibility: hidden;
+      // perspective: 1000;
+      // backface-visibility: hidden;
     }
   }
   &.top {
