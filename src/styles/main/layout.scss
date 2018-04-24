@@ -6,9 +6,9 @@ body {
   color: white;
   background: black;
 
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-overflow-scrolling: touch;
+  // -webkit-font-smoothing: antialiased;
+  // text-rendering: optimizeLegibility;
+  // -webkit-overflow-scrolling: touch;
 }
 
 .running-lines {
@@ -33,6 +33,7 @@ body {
 
   text-align: center;
   white-space: nowrap;
+  pointer-events: none;
 
   color: black;
   border: 1px solid black;
