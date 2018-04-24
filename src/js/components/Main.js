@@ -98,6 +98,7 @@ class Main extends Component {
         <div className="header">
           <img src="./public/icons/c_c-logo.svg" alt="" onClick={::this.projectSwitcher.bind(this, 'home')}/>
         </div>
+        <div className="btn-popup">Next project</div>
         <div className="content">
           <div className="navbar">
             <img src="./public/icons/menu-top-bar.svg" alt="" />
@@ -129,7 +130,6 @@ class Main extends Component {
             <div className="project-switcher">
               <div className="prev-btn" onClick={::this.projectSwitcher.bind(this, 'prev')}><img src="./public/icons/arrow-left.svg" alt="" /></div>
               <div className="next-btn" onClick={::this.projectSwitcher.bind(this, 'next')}><img src="./public/icons/arrow-right.svg" alt="" /></div>
-              <div className="btn-popup">Next project</div>
             </div>
           </div>
           <Project project={this.props.data[this.state.projectID]}/>

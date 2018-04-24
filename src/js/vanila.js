@@ -1,5 +1,9 @@
 'use strict';
 
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+window.requestAnimationFrame = requestAnimationFrame;
+
 // project switcher hover
 export function switcherHover() {
   const prevBtn = document.querySelectorAll('.prev-btn');
@@ -24,6 +28,11 @@ export function switcherHover() {
     item.addEventListener('mouseleave', (e) => {
       btnPopup.classList.remove('active');
     });
+  })
+
+  document.addEventListener('mousemove', (event) => {
+    btnPopup.style.left = event.clientX + 15 + 'px';
+    btnPopup.style.top = event.clientY + 25 + 'px';
   })
 }
 
