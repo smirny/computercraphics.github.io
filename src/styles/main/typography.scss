@@ -1,6 +1,9 @@
 @font-face {
   font-family:"HiraMinPro-W3";
-  src:url("/public/fonts/hiraminpro-w3-opentype.woff2") format("woff2"),url("/public/fonts/hiraminpro-w3-opentype.woff") format("woff"),url("/public/fonts/hiraminpro-w3-opentype.otf") format("opentype");
-  font-style:normal;font-weight:400;
-}
+  src:  url("/public/fonts/hiraminpro-w3-opentype.woff2") format("woff2"),
+        url("/public/fonts/hiraminpro-w3-opentype.woff") format("woff"),
+        url("/public/fonts/hiraminpro-w3-opentype.otf") format("opentype");
 
+  font-style:normal;
+  font-weight:400;
+}
