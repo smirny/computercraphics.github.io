@@ -54,7 +54,13 @@ class Main extends Component {
     let maxID = data.length - 1;
 
     if (direction === 'next') {
-      projectID === maxID ? projectID = 0 : projectID += 1
+      if (projectID === maxID) {
+        projectID = 0
+      } else if (projectID === 0) {
+        projectID = projectID + 2
+      } else {
+        projectID += 1
+      }
 
       this.setState({
         currentPath: data[projectID].url,
@@ -81,7 +87,13 @@ class Main extends Component {
 
       window.history.pushState(projectID, 'C_C', '?' + data[projectID].url);
     } else {
-      projectID === 0 ? projectID = maxID : projectID -= 1
+      if (projectID === 0) {
+        projectID = maxID
+      } else if (projectID === 2) {
+        projectID = projectID - 2
+      } else {
+        projectID -= 1
+      }
 
       this.setState({
         currentPath: data[projectID].url,
